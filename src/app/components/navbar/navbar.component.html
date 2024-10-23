@@ -1,0 +1,13 @@
+<nav class="navbar" (click)="clearUserSelected()">
+  <div class="navbar-body">
+    <div class="navbar-seccion">
+      <a [routerLink]="['/users']">Usuarios</a>
+      <a [routerLink]="['/events']">Eventos</a>
+      <a [routerLink]="['/reservations']">Reservaciones</a>
+    </div>
+    <div class="navbar-seccion">
+      <a [routerLink]="['/login']">Login</a>
+      <a [routerLink]="['/register']">Registro</a>
+    </div>
+  </div>
+</nav>

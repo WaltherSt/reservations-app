@@ -1,0 +1,5 @@
+<div class="flex justify-around flex-wrap gap-4">
+  @for (event of eventList; track $index) {
+  <card-event [data]="event" />
+  }
+</div>

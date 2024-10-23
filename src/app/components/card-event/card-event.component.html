@@ -1,0 +1,38 @@
+<div
+  class="p-5 rounded-md shadow-lg flex gap-4 bg-white text-gray-600 hover:shadow-2xl cursor-pointer transition-all w-[650px]"
+  [id]="data.id"
+>
+  <div class="flex flex-col items-center justify-center">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlPuFkcywr_MaHbUBfJoPqVujMCZcJgdbUIi0TbpIMQsnnLqzXKDU_ZhvWIb6tvvybeT0&usqp=CAU"
+      alt=""
+    />
+  </div>
+  <div class="flex flex-col justify-between">
+    <div>
+      <p class="title text-primario">{{ data.name }}</p>
+    </div>
+    <div class="mt-5">
+      <p class="text-sm text-gray-400">
+        {{ data.startDateTime | date : "longDate" }}
+      </p>
+      <p class="text-gray-400 text-sm">{{ data.location }}</p>
+    </div>
+    <div class="flex gap-3 text-sm">
+      <div class="flex gap-2">
+        <p class="text-gray-400">Reservas:</p>
+        <p>{{ data.maxCapacity - data.availableTickets }}</p>
+      </div>
+      <div class="flex gap-2">
+        <p class="text-gray-400">Plazas:</p>
+        <p>
+          {{ data.maxCapacity - (data.maxCapacity - data.availableTickets) }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center gap-2 text-sm px-3">
+    <p class="text-gray-400">Precio:</p>
+    <p>${{ data.price }}</p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.table {
+  @apply w-full;
+}
+.table-head {
+  @apply h-12 border-b-2 border-gray-300;
+}
+th {
+  font-family: "Poppins-medium";
+}
+.tr-head {
+  @apply text-primario;
+}
+td {
+  @apply text-center;
+}
+tbody tr {
+  @apply border-b h-12 hover:bg-primario hover:text-white cursor-pointer transition-all text-gray-600;
+}

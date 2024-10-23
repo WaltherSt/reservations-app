@@ -1,0 +1,33 @@
+<div class="flex gap-3 items-center p-2 bg-primario text-white rounded-t mb-2">
+  <ng-icon name="heroListBullet" size="35px" />
+  <p class="text-xl">Listado de {{ title }}</p>
+</div>
+<table class="table bg-white">
+  <thead class="table-head">
+    <tr class="tr-head">
+      @for (title of columnNames; track $index) {
+      <th>{{ title }}</th>
+      }
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (d of data; track $index) {
+    <tr>
+      @for (title of propertiesName; track $index) {
+
+      <td>{{ d[title] }}</td>
+      }
+      <td>
+        <button (click)="selectedItem(d)">
+          <ng-icon name="heroPencilSquare" class="mr-2" />
+        </button>
+
+        <button (click)="itemId(d.id)">
+          <ng-icon name="heroTrash" />
+        </button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<div class="flex gap-2 p-4 text-primario">
+  @for (item of pageIterator; track item) {
+  <button
+    class="w-8 bg-primario text-white rounded"
+    [class]="{ 'bg-opacity-70': pageNumber == item }"
+    (click)="changePage(item)"
+  >
+    {{ item + 1 }}
+  </button>
+  }
+</div>

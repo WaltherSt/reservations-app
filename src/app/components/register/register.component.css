@@ -1,0 +1,7 @@
+input {
+  @apply rounded;
+  @apply text-gray-700;
+}
+label {
+  @apply text-primario;
+}

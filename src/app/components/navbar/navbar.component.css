@@ -1,0 +1,15 @@
+.navbar {
+  @apply bg-primario  h-14 px-4;
+  font-family: "Poppins-medium";
+}
+
+.navbar-body {
+  @apply flex justify-between items-center h-full;
+}
+
+.navbar-seccion {
+  @apply flex;
+}
+a {
+  @apply text-white cursor-pointer p-4 hover:text-opacity-70 transition-all;
+}

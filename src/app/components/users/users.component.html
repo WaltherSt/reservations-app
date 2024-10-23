@@ -1,0 +1,11 @@
+<app-table
+  [columnNames]="['Id', 'Nombres', 'Correo']"
+  [data]="users"
+  [title]="'Usuarios'"
+  [propertiesName]="['id', 'name', 'email']"
+  (sendItemId)="deleteUser($event)"
+  (itemSelected)="updateUser($event)"
+/>
+<div class="flex justify-center">
+  <paginator />
+</div>
