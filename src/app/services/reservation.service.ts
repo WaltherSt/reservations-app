@@ -9,7 +9,7 @@ import { Reservation } from '../models/Reservation';
 export class ReservationService {
   // private url: string = 'http://localhost:8080/reservation';
   private url: string =
-    'http://ec2-54-174-111-131.compute-1.amazonaws.com:8080/reservation';
+    'http://ec2-34-226-190-76.compute-1.amazonaws.com/reservation';
   constructor(private http: HttpClient) {}
 
   findAll(): Observable<Reservation[]> {

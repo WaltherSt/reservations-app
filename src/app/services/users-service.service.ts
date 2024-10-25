@@ -11,8 +11,7 @@ import { UserState } from '../store/reducers/users.reducer';
 })
 export class UsersServiceService {
   // private url: string = 'http://localhost:8080/user';
-  private url: string =
-    'http://ec2-54-174-111-131.compute-1.amazonaws.com:8080/user';
+  private url: string = 'http://ec2-34-226-190-76.compute-1.amazonaws.com/user';
   pageNumber: number = 0;
 
   constructor(
